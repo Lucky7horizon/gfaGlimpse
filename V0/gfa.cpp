@@ -80,6 +80,7 @@ void Gfa::gfa2Graph (const std::string& gfaFile, DiGraph& diGraph, BiedgedGraph&
     // std::cout << segmentNumber << " " << linkNumber << std::endl;
     diGraph.edge = std::vector <std::set <long long> > ((segmentNumber << 1) + 1, std::set <long long>());
     diBiedgedGraph.edge = std::vector <std::set <Biedge> > ((segmentNumber << 1) + 1, std::set <Biedge> ());
+    diBiedgedGraph.redge = std::vector <std::set <Biedge> > ((segmentNumber << 1) + 1, std::set <Biedge> ()); 
     std::vector <std::set <char> > segmentDirection = std::vector <std::set <char> > (segmentNumber + 1, std::set <char>());
 
     for(auto line: tempLine) {
